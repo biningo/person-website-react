@@ -1,0 +1,116 @@
+
+.content {
+    margin-left: 4%;
+
+}
+
+.article-title {
+    font-size: 180%;
+    color: black;
+
+}
+
+
+.article-title:hover {
+    color: black;
+    border-bottom: 10px solid honeydew;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+
+
+.article-footer-icon {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.category-link-icon:hover {
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+.article-item {
+    margin-top: 45px;
+}
+
+
+.menu {
+    font-size: 150%;
+    background-color: white;
+    box-shadow:3px 3px 6px #c8c8c8 ;
+    padding-left: 2%;
+    padding-bottom:0.3%;
+    padding-top: 0.1%;
+}
+
+
+.menu-item {
+    margin-left: 3%;
+}
+
+.avatar:hover{
+    cursor: pointer;
+}
+
+.other-link {
+    color: black;
+}
+
+.other-link:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.category-title {
+    color: black;
+}
+
+.category-title:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.article-count {
+    font-size: 20%;
+    color: blue;
+}
+.github-link{
+    margin-left: 1%;
+}
+.github-link:hover{
+    cursor: pointer;
+    color: black;
+
+}
+.twitter-link{
+    margin-left: 1%;
+}
+.twitter-link:hover{
+    cursor: pointer;
+    color: deepskyblue;
+}
+
+.logo-link:hover{
+    color: black;
+}
+
+.menu-fold{
+    font-size: 200%;
+    margin-right: 5%;
+}
+
+.menu-fold-left{
+    text-align: right;
+
+}
+.menu-drawer{
+    font-size: 150%;
+}
+
+.menu-item-drawer{
+    margin-bottom: 10%;
+}
+.menu-item-drawer:hover{
+    cursor: pointer;
+    color: black;
+}
