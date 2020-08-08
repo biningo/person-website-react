@@ -1,11 +1,12 @@
 import React, {FC, useEffect, useState} from "react";
-import {BackTop, Col, Row} from 'antd';
+import {BackTop} from 'antd';
 import "./home.css"
-import ArticleItem from "../../components/Menu/ArticleItem";
 import {ArticleProps} from "../../common/interfaces/ArticleProps";
-import {useLocation, useHistory} from "react-router-dom"
+import {useHistory, useLocation} from "react-router-dom"
 import GetParams from "../../common/GetParams";
 import MenuNav from "../../components/Menu/MenuNav";
+import BlogList from '../../components/Blog/BlogList';
+import {BlogProps} from "../../common/interfaces/BlogProps";
 
 
 const Home: FC = () => {
@@ -30,11 +31,11 @@ const Home: FC = () => {
     }, [Category, Time,title]);
 
 
-    let articles = [];
+    let articles:BlogProps[] = [];
     for (let i = 0; i < 100; i++) {
-        let article = <ArticleItem/>;
-        articles.push(article)
+        articles.push({bid:i,title:'cript在React中使用总结ript在React中使用总结',category:'docker',time:'2020-03-20'})
     }
+
 
     let Categories = ["java","docker和k8s","网络编程","Python爬虫","操作系统","网络原理"];
     let Times = ['2020-06-28', '2020-10-01', '2020-10-21'];
@@ -52,16 +53,8 @@ const Home: FC = () => {
     return (
         <div>
             <MenuNav {...articleProps}/>
-
-            <div className="content">
-                <div>
-                    {articles}
-                </div>
-                <BackTop/>
-
-            </div>
-
-
+            <BlogList articles={articles}/>
+            <BackTop/>
         </div>
     )
 };
