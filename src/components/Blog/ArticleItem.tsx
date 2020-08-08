@@ -1,17 +1,28 @@
 import {Col, Row} from "antd";
 import {FolderOutlined} from "@ant-design/icons/lib";
-import React, {FC} from "react";
+import React from "react";
 import {BlogProps} from "../../common/interfaces/BlogProps";
 
-const ArticleItem:FC = ()=>{
+const ArticleItem = (props:BlogProps)=>{
+    const {bid,title,category,time}  = props;
+
+    const LinkToBlogDetail = ()=>{
+        console.log(bid);
+    };
+
+
+    const LinkToCategory = ()=>{
+      console.log(category)
+    };
+
     return (
         <div  className="article-item">
             <Row>
                 <Col lg={4}/>
-                <Col lg={10}> <span  className="article-title">cript在React中使用总结ript在React中使用总结</span></Col>
+                <Col lg={10}> <span onClick={LinkToBlogDetail}   className="article-title">{title}</span></Col>
                 <Col lg={10}>
-                    <span className="article-footer-icon category-link-icon"><FolderOutlined/>ockerdockerdocker</span>
-                    <span className="article-footer-icon">2020-02-16</span>
+                    <span onClick={LinkToCategory} className="article-footer-icon category-link-icon"><FolderOutlined/>{category}</span>
+                    <span className="article-footer-icon">{time}</span>
                 </Col>
             </Row>
         </div>
