@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from "react";
 import {useLocation} from "react-router";
-import GobalMenuNav from "../../components/Menu/GobalMenuNav";
+import CommonMenuNav from "../../components/Menu/CommonMenuNav";
 
 
 const About: FC = () => {
@@ -14,7 +14,7 @@ const About: FC = () => {
 
     return (
         <>
-            <GobalMenuNav/>
+            <CommonMenuNav/>
 
             <h1>About</h1>
 
