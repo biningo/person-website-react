@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from "react";
 import "../home/home.css"
-import GobalMenuNav from "../../components/Menu/GobalMenuNav";
+import CommonMenuNav from "../../components/Menu/CommonMenuNav";
 import {useLocation} from "react-router-dom"
 
 const Album: FC = () => {
@@ -14,7 +14,7 @@ const Album: FC = () => {
 
     return (
         <>
-            <GobalMenuNav/>
+            <CommonMenuNav/>
             <h1>Album</h1>
         </>
     )
