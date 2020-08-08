@@ -9,8 +9,8 @@ import {
 import React, {useState} from "react";
 import {useHistory} from "react-router";
 import {ArticleProps} from "../../common/interfaces/ArticleProps";
-import CategoryMenu from "./MenuItem/CategoryMenu";
-import TimeMenu from "./MenuItem/TimeMenu";
+import CategoryDropDownMenu from "./MenuItem/CategoryDropDownMenu";
+import TimeDropDownMenu from "./MenuItem/TimeDropDownMenu";
 
 const DrawerMenu  = (props:ArticleProps)=>{
 
@@ -22,12 +22,13 @@ const DrawerMenu  = (props:ArticleProps)=>{
         history.push(path)
     };
 
-    const categoryMenu = <CategoryMenu {...{Category,Categories,SetCategory}}/>;
-    const timeMenu = <TimeMenu {...{Time,Times,SetTime}} />;
+    const categoryMenu = <CategoryDropDownMenu {...{Category,Categories,SetCategory}}/>;
+    const timeMenu = <TimeDropDownMenu {...{Time,Times,SetTime}} />;
 
 
     return (
         <div>
+
 
             <Affix className="menu-fold-left">
                     <span className="menu-fold" onClick={() => {
@@ -36,6 +37,7 @@ const DrawerMenu  = (props:ArticleProps)=>{
                         <MenuUnfoldOutlined/>
                     </span>
             </Affix>
+
             <Drawer
 
                 title={<div className="menu-item avatar" onClick={() => {

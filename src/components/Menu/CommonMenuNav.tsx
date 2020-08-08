@@ -1,5 +1,5 @@
 import React from "react";
-import GobalMenu from "./MenuItem/GobalMenu";
+import GobalMenuItems from "./MenuItem/GobalMenuItems";
 import {Affix} from "antd";
 
 
@@ -8,7 +8,7 @@ const GobalMenuNav = () => {
         <>
             <Affix offsetTop={0}>
                 <div className="menu">
-                    <GobalMenu/>
+                    <GobalMenuItems/>
                 </div>
             </Affix>
         </>
