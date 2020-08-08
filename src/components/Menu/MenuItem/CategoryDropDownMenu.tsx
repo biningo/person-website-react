@@ -3,7 +3,7 @@ import {Menu} from "antd";
 import React from "react";
 import {useHistory} from "react-router-dom"
 
-const CategoryMenu = (props:CategoryProps)=>{
+const CategoryDropDownMenu = (props:CategoryProps)=>{
 
     let history = useHistory();
 
@@ -27,4 +27,4 @@ const CategoryMenu = (props:CategoryProps)=>{
     )
 };
 
-export default CategoryMenu;
+export default CategoryDropDownMenu;

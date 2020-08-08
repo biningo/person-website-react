@@ -6,7 +6,7 @@ import TimeDropDownMenu from "./MenuItem/TimeDropDownMenu";
 import CategoryDropDownMenu from "./MenuItem/CategoryDropDownMenu";
 import GobalMenuItems from "./MenuItem/GobalMenuItems";
 
-const CategoryAndTimeMenuNav = (props: ArticleProps) => {
+const TopMenuNav = (props: ArticleProps) => {
 
     const {Times, Categories, Category, Time, SetCategory, SetTime} = props;
     let history = useHistory();
@@ -46,4 +46,4 @@ const CategoryAndTimeMenuNav = (props: ArticleProps) => {
     )
 };
 
-export default CategoryAndTimeMenuNav;
+export default TopMenuNav;

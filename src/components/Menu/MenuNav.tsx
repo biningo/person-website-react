@@ -1,16 +1,16 @@
 import React, {FC} from "react";
 import {Col, Row} from "antd";
-import TopMenu from "./TopMenu";
-import DrawerMenu from "./DrawerMenu";
+import TopMenuNav from "./TopMenuNav";
+import DrawerMenuNav from "./DrawerMenuNav";
 import {ArticleProps} from "../../common/interfaces/ArticleProps";
 const MenuNav = (articleProps:ArticleProps)=>{
     return (
         <Row>
             <Col xs={0} lg={24}>
-                <TopMenu {...articleProps}  />
+                <TopMenuNav {...articleProps}  />
             </Col>
             <Col xs={24} lg={0}>
-                <DrawerMenu {...articleProps} />
+                <DrawerMenuNav {...articleProps} />
             </Col>
         </Row>
     )

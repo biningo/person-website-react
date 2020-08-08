@@ -3,7 +3,7 @@ import {Avatar} from "antd";
 import {GithubOutlined, InstagramOutlined, QuestionCircleOutlined, TwitterOutlined} from "@ant-design/icons/lib";
 import {useHistory} from "react-router";
 
-const GobalMenu: FC = () => {
+const GobalMenuItems: FC = () => {
     let history = useHistory();
     const PathLink = (path: string) => {
         history.push(path)
@@ -33,4 +33,4 @@ const GobalMenu: FC = () => {
 
 };
 
-export default GobalMenu;
+export default GobalMenuItems;

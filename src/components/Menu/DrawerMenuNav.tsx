@@ -12,7 +12,7 @@ import {ArticleProps} from "../../common/interfaces/ArticleProps";
 import CategoryDropDownMenu from "./MenuItem/CategoryDropDownMenu";
 import TimeDropDownMenu from "./MenuItem/TimeDropDownMenu";
 
-const DrawerMenu  = (props:ArticleProps)=>{
+const DrawerMenuNav  = (props:ArticleProps)=>{
 
     const {Times, Categories, Category, Time, SetCategory, SetTime} = props;
     let [drawer,setDrawer] = useState(false);
@@ -101,4 +101,4 @@ const DrawerMenu  = (props:ArticleProps)=>{
 
 };
 
-export default DrawerMenu;
+export default DrawerMenuNav;

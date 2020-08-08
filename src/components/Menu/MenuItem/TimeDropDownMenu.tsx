@@ -2,7 +2,7 @@ import {TimeProps} from "../../../common/interfaces/TimeProps";
 import {Menu} from "antd";
 import React from "react";
 
-const TimeMenu = (props:TimeProps)=>{
+const TimeDropDownMenu = (props:TimeProps)=>{
     const {Time,SetTime,Times} = props;
     const changeTime = (e: any) => {
         SetTime(e.key);
@@ -22,4 +22,4 @@ const TimeMenu = (props:TimeProps)=>{
     )
 };
 
-export default TimeMenu;
+export default TimeDropDownMenu;

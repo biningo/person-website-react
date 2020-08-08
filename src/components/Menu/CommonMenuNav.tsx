@@ -3,7 +3,7 @@ import GobalMenuItems from "./MenuItem/GobalMenuItems";
 import {Affix} from "antd";
 
 
-const GobalMenuNav = () => {
+const CommonMenuNav = () => {
     return (
         <>
             <Affix offsetTop={0}>
@@ -15,4 +15,4 @@ const GobalMenuNav = () => {
     )
 };
 
-export default GobalMenuNav;
+export default CommonMenuNav;
