@@ -8,7 +8,7 @@ const ArticleItem = (props:BlogProps)=>{
     const {bid,title,category,time}  = props;
     let history = useHistory();
     const LinkToBlogDetail = ()=>{
-        history.push("/blog?bid="+bid+"&category="+category+"&time="+time);
+        history.push("/blog?bid="+bid);
     };
 
 
