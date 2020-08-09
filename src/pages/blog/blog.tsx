@@ -10,31 +10,43 @@ import HeadingBlock from "./HeadingBlock";
 import {FolderOutlined} from "@ant-design/icons/lib";
 import {useHistory, useLocation} from "react-router";
 import GetParams from "../../common/GetParams";
+import {BlogEntity} from "../../common/interfaces/BlogEntity";
 
 const {Link} = Anchor;
 
 const Blog = () => {
 
-    let [source, setSource] = useState();
+    //md文件待解析内容
+    let [blog,setBlog] = useState({bid:"",title:"",content:"",time:"",category:""} as BlogEntity);
+
+    //是否还在加载中
     let [isLoad, setLoad] = useState(true);
+    //文章锚点目录
     let [SideBar, setSideBar] = useState();
+    //url path参数解析
+    let location = useLocation();
+    let history = useHistory();
+    let params = GetParams(location);
+    let bid = params.get('bid');
+
     useEffect((): any => {
         setLoad(true);
         request({
-            url: "/blog/get",
+            url: "/blog/"+bid,
             method: 'get'
         }).then(resp => {
-            setSource(resp.data);
+            setBlog(resp.data.Data);
 
-
+            //获取所有的 h标签
             let arr = [];
             const links = document.getElementsByClassName("article-link");
             for (let i = 0; i < links.length; i++) {
                 let sLevel: string | null = links[i].getAttribute("level");
-                // @ts-ignore
+                //目录最多展示到 h4
                 if(sLevel=="1" ||sLevel=="2" || sLevel=="3"|| sLevel=="4"){
                     arr.push({
-                        level: parseInt(sLevel ? sLevel : '0'), title: links[i].getAttribute("title"),
+                        level: parseInt(sLevel ? sLevel : '0'),
+                        title: links[i].getAttribute("title"),
                         href: links[i].getAttribute("href")
                     });
                 }
@@ -52,21 +64,11 @@ const Blog = () => {
                         }
                     </Anchor>
                 </div>);
-
-            setLoad(false);
-
-
+            setLoad(false); //加载完毕
         }).catch(err => {
             console.log(err)
         });
-    }, [source]);
-
-
-    let location = useLocation();
-    let history = useHistory();
-    let params = GetParams(location);
-    let category = params.get('category');
-    let time = params.get('time');
+    }, [blog]);
 
 
     return (
@@ -86,13 +88,13 @@ const Blog = () => {
 
                         <div className="article-head">
                             <div className="article-head-title">
-                                <span>题目题目题目题目题目题目题目题目题目题目题目题目</span>
+                                <span>{}</span>
                             </div>
                             <div>
                                 <span onClick={() => {
-                                    history.push("/home?category=" + category + "&time=all")
-                                }} className="article-footer-icon category-link-icon"><FolderOutlined/>{category}</span>
-                                <span className="article-footer-icon">{time}</span>
+                                    history.push("/home?category=" + blog.category + "&time=all")
+                                }} className="article-footer-icon category-link-icon"><FolderOutlined/>{blog.category}</span>
+                                <span className="article-footer-icon">{blog.time}</span>
                             </div>
                         </div>
                         <hr/>
@@ -100,7 +102,7 @@ const Blog = () => {
 
                         <div className="article-content" id="article-body">
                             <ReactMarkdown
-                                source={source}
+                                source={blog.content}
                                 escapeHtml={false}
                                 skipHtml={false}
                                 renderers={{
