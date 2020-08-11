@@ -1,6 +1,13 @@
 import React, {FC} from "react";
 import {Avatar} from "antd";
-import {GithubOutlined, InstagramOutlined, QuestionCircleOutlined, TwitterOutlined} from "@ant-design/icons/lib";
+import {
+    AreaChartOutlined,
+    GithubOutlined,
+    InstagramOutlined,
+    QuestionCircleOutlined,
+    SnippetsOutlined,
+    TwitterOutlined
+} from "@ant-design/icons/lib";
 import {useHistory} from "react-router";
 
 const GobalMenuItems: FC = () => {
@@ -27,6 +34,8 @@ const GobalMenuItems: FC = () => {
                   className="menu-item other-link"><InstagramOutlined />相册</span>
             <span onClick={() => PathLink("/about")} key="about"
                   className="menu-item other-link"><QuestionCircleOutlined />关于本站</span>
+            <span onClick={() => PathLink("/archive")} key="archive"
+                  className="menu-item other-link"><AreaChartOutlined />Archive</span>
 
         </>
     )
