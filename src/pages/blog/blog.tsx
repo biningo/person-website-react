@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../home/home.css"
 import ReactMarkdown from 'react-markdown'
-import CommonMenuNav from "../../components/Menu/CommonMenuNav";
 import CodeBlock from "./CodeBlock";
 import {Anchor, BackTop, Col, Row, Spin} from "antd";
 import "./blog.css"
@@ -11,6 +10,7 @@ import {FolderOutlined} from "@ant-design/icons/lib";
 import {useHistory, useLocation} from "react-router";
 import GetParams from "../../common/GetParams";
 import {BlogEntity} from "../../common/interfaces/BlogEntity";
+import CommonMenuNav from "../../common/components/Menu/CommonMenu/CommonMenuNav";
 
 const {Link} = Anchor;
 
@@ -88,7 +88,7 @@ const Blog = () => {
 
                         <div className="article-head">
                             <div className="article-head-title">
-                                <span>{}</span>
+                                <span>{blog.title}</span>
                             </div>
                             <div>
                                 <span onClick={() => {
