@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from "react";
 import {useLocation} from "react-router";
-import CommonMenuNav from "../../components/Menu/CommonMenuNav";
+import CommonMenuNav from "../../common/components/Menu/CommonMenu/CommonMenuNav";
 
 
 const About: FC = () => {
@@ -8,6 +8,7 @@ const About: FC = () => {
     let location = useLocation();
 
     let [title,setTitle] = useState(location.pathname);
+
     useEffect(()=>{
         document.title = title.substring(1,title.length);
     },[title]);
@@ -15,7 +16,6 @@ const About: FC = () => {
     return (
         <>
             <CommonMenuNav/>
-
             <h1>About</h1>
 
         </>
