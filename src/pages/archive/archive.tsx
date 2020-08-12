@@ -1,5 +1,5 @@
 import React from "react";
-import CommonMenuNav from "../../components/Menu/CommonMenuNav";
+import CommonMenuNav from "../../common/components/Menu/CommonMenu/CommonMenuNav";
 
 
 const Archive = () => {
