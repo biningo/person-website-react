@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 import './App.css'
 import routers from "./router"
 import {BrowserRouter as Router, Route,Redirect} from 'react-router-dom';
-import {Skeleton} from "antd";
+import {Skeleton, Spin} from "antd";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
     return (
         <div className='App'>
-            <Suspense fallback={<Skeleton avatar active paragraph={{ rows: 24 }} />}>
+            <Suspense fallback={<h1>懒加载中.....</h1>}>
                 <Router>
                     {rs}
                 </Router>
