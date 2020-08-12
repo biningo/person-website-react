@@ -4,9 +4,9 @@ import "./home.css"
 import {ArticleProps} from "../../common/interfaces/ArticleProps";
 import {useHistory, useLocation} from "react-router-dom"
 import GetParams from "../../common/GetParams";
-import MenuNav from "../../components/Menu/MenuNav";
-import BlogList from '../../components/Blog/BlogList';
+import MenuNav from "./component/MenuNav";
 import {BlogProps} from "../../common/interfaces/BlogProps";
+import BlogList from "../blog/components/BlogList";
 
 
 const Home: FC = () => {
@@ -24,7 +24,7 @@ const Home: FC = () => {
     //一、根据path 更改网页标题【也就是每个页面标题】
     let [title, setTitle] = useState(location.pathname);
     useEffect(() => {
-        document.title = title.substring(1, title.length)
+        document.title = "icepan's blog"
     }, [title]);
 
 
