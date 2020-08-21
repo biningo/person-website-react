@@ -44,7 +44,7 @@ const Home: FC = () => {
     useEffect(() => {
         let arr: BlogProps[] = [];
         for (let i = 0; i < 100; i++) {
-            arr.push({bid: i, title: 'cript在React中使用总结ript在React中使用总结', category: 'docker', time: '2020-03-20'})
+            arr.push({bid: i, title: '中使用总结中使用总结中使用总结中使用总结', category: 'docker', time: '2020-03-20'})
         }
         setArticleList(arr);
 

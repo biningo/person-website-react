@@ -1,11 +1,11 @@
 
 .content {
-    margin-left: 4%;
 
+    padding: 5px;
 }
 
 .article-title {
-    font-size: 180%;
+    font-size: 130%;
     color: black;
 
 }
@@ -21,7 +21,7 @@
 
 .article-footer-icon {
     margin-right: 5px;
-    font-size: 20px;
+
 }
 
 .category-link-icon:hover {
@@ -30,12 +30,13 @@
 }
 
 .article-item {
-    margin-top: 45px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 
 .menu {
-    font-size: 150%;
+    font-size: 100%;
     background-color: white;
     box-shadow:3px 3px 6px #c8c8c8 ;
     padding-left: 2%;
