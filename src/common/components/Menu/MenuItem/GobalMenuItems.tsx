@@ -1,5 +1,5 @@
 import React, {FC, useEffect} from "react";
-import {Avatar} from "antd";
+import {Avatar, Collapse} from "antd";
 import {
     AreaChartOutlined,
     GithubOutlined,
@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons/lib";
 import {useHistory} from "react-router";
 
+const { Panel } = Collapse;
 const GobalMenuItems: FC = () => {
     let history = useHistory();
     const PathLink = (path: string) => {
@@ -44,7 +45,6 @@ const GobalMenuItems: FC = () => {
                   className="menu-item other-link"><QuestionCircleOutlined />关于本站</span>
             <span id="archive" onClick={() => PathLink("/archive")} key="archive"
                   className="menu-item other-link"><AreaChartOutlined />Archive</span>
-
         </>
     )
 

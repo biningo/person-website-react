@@ -1,11 +1,16 @@
 
 .content {
-
-    padding: 5px;
+    margin-top: 2%;
+    text-align: center;
 }
 
+.article-item {
+    padding-top: 4%;
+}
+
+
 .article-title {
-    font-size: 130%;
+    font-size: 145%;
     color: black;
 
 }
@@ -13,11 +18,16 @@
 
 .article-title:hover {
     color: black;
-    border-bottom: 10px solid honeydew;
-    padding-bottom: 7px;
+    background-color: honeydew;
+    /*border-bottom: 5px solid ;*/
     cursor: pointer;
 }
 
+.page-head:hover{
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
 
 .article-footer-icon {
     margin-right: 5px;
@@ -29,18 +39,13 @@
     cursor: pointer;
 }
 
-.article-item {
-    text-align: center;
-    margin-top: 30px;
-}
-
 
 .menu {
-    font-size: 100%;
+    font-size: 130%;
     background-color: white;
-    box-shadow:3px 3px 6px #c8c8c8 ;
+    box-shadow: 3px 3px 6px #c8c8c8;
     padding-left: 2%;
-    padding-bottom:0.3%;
+    padding-bottom: 0.3%;
     padding-top: 0.1%;
 }
 
@@ -49,7 +54,7 @@
     margin-left: 2%;
 }
 
-.avatar:hover{
+.avatar:hover {
     cursor: pointer;
 }
 
@@ -75,43 +80,49 @@
     font-size: 20%;
     color: blue;
 }
-.github-link{
+
+.github-link {
     margin-left: 1%;
 }
-.github-link:hover{
+
+.github-link:hover {
     cursor: pointer;
     color: black;
 
 }
-.twitter-link{
+
+.twitter-link {
     margin-left: 1%;
 }
-.twitter-link:hover{
+
+.twitter-link:hover {
     cursor: pointer;
     color: deepskyblue;
 }
 
-.logo-link:hover{
+.logo-link:hover {
     color: black;
 }
 
-.menu-fold{
+.menu-fold {
     font-size: 200%;
     margin-right: 5%;
 }
 
-.menu-fold-left{
+.menu-fold-left {
     text-align: right;
 
 }
-.menu-drawer{
+
+.menu-drawer {
     font-size: 150%;
 }
 
-.menu-item-drawer{
+.menu-item-drawer {
     margin-bottom: 10%;
 }
-.menu-item-drawer:hover{
+
+.menu-item-drawer:hover {
     cursor: pointer;
     color: black;
 }

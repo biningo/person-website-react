@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from "react";
-import {BackTop} from 'antd';
+import {BackTop, Divider} from 'antd';
 import "./home.css"
 import {ArticleProps} from "../../common/interfaces/ArticleProps";
 import {useHistory, useLocation} from "react-router-dom"
@@ -27,13 +27,12 @@ const Home: FC = () => {
         document.title = "icepan's blog"
     }, [title]);
 
-
+    let [Categories,setCategories]= useState([] as string[]);
+    let [Times,setTimes]= useState([] as string[]);
     //二、请求全部的category  times数据数据 只更在加载的时候更新dom一次 先模拟数据
-    let Categories: string[] = [];
-    let Times: string[] = [];
     useEffect(() => {
-        Categories = ["java", "docker和k8s", "网络编程", "Python爬虫", "操作系统", "网络原理"];
-        Times = ['2020-06-28', '2020-10-01', '2020-10-21'];
+        setCategories(["java", "docker和k8s", "网络编程", "Python爬虫", "操作系统", "网络原理"]);
+        setTimes(['2020-06-28', '2020-10-01', '2020-10-21']);
     }, [false]);
 
 
@@ -43,8 +42,8 @@ const Home: FC = () => {
     let [articleList, setArticleList] = useState(new Array<BlogProps>());
     useEffect(() => {
         let arr: BlogProps[] = [];
-        for (let i = 0; i < 100; i++) {
-            arr.push({bid: i, title: '中使用总结中使用总结中使用总结中使用总结', category: 'docker', time: '2020-03-20'})
+        for (let i = 0; i < 24; i++) {
+            arr.push({bid: i, title: '结中总结中总总结中结中使用总结'+i, category: 'docker', time: '2020-03-20'})
         }
         setArticleList(arr);
 
@@ -64,11 +63,11 @@ const Home: FC = () => {
         SetTime
     };
 
-
     return (
         <div>
             <MenuNav {...articleProps}/>
-            <BlogList articles={articleList}/>
+
+            <BlogList articles={articleList} setArticleList={setArticleList} />
             <BackTop/>
         </div>
     )

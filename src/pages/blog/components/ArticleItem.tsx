@@ -28,7 +28,6 @@ const ArticleItem = (props: BlogProps) => {
                 <span className="article-footer-icon">{time}</span>
             </div>
 
-
         </div>
     )
 
