@@ -21,7 +21,8 @@ const GobalMenuItems: FC = () => {
         if(pathname!='/home'){
             let d = document.getElementById(pathname.substring(1,pathname.length));
             if(d){
-                d.style.color="red"
+                d.style.fontSize="120%";
+                d.style.fontWeight="bolder";
             }
         }
     });

@@ -80,7 +80,7 @@ const Album: FC = () => {
 
     let links = [];
     let cards = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 5; i++) {
         links.push(<a href={"#2020-" + i}><Button className="tag" >2020-{i}</Button></a>);
 
 

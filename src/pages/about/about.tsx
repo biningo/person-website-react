@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from "react";
 import {useLocation} from "react-router";
 import CommonMenuNav from "../../common/components/Menu/CommonMenu/CommonMenuNav";
-
+import "../home/home.css"
 
 const About: FC = () => {
 

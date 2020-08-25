@@ -66,9 +66,9 @@ const Home: FC = () => {
     useEffect(() => {
         let arr: BlogProps[] = [];
         for (let i = 0; i < 12; i++) {
-            arr.push({bid: i, title: '结中总总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中', category: 'docker', time: '2020-03-20'});
-            arr.push({bid: i, title: '用结中总总结中结中使用总结结中结中使用总结', category: 'docker', time: '2020-03-20'});
-            arr.push({bid: i, title: '总结中总结中总总结中结中使用总结结中结中', category: 'docker', time: '2020-03-20'});
+            arr.push({bid: i, title: 'SSH、SSL、HTTPS、数字签名', category: 'docker', time: '2020-03-20'});
+            arr.push({bid: i, title: 'kafka为何如此高效', category: 'docker', time: '2020-03-20'});
+            arr.push({bid: i, title: '消费者分区分配问题消费者分区分配问题', category: 'docker', time: '2020-03-20'});
         }
         setArticleList(arr);
 

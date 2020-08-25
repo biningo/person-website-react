@@ -16,6 +16,7 @@ const CommonDrawerMenuNav = () => {
         history.push(path)
     };
     let [drawer, setDrawer] = useState(false);
+
     return (
         <>
 
@@ -50,10 +51,10 @@ const CommonDrawerMenuNav = () => {
                 <div className="menu-drawer">
 
                     <div id="about" onClick={() => PathLink("/about")} key="about"
-                         className="menu-item-drawer"><QuestionCircleOutlined/>关于本站
+                         className="menu-item-drawer"><span id="album"><QuestionCircleOutlined/>关于本站</span>
                     </div>
-                    <div id="album" onClick={() => PathLink("/album")} key="album"
-                         className="menu-item-drawer"><InstagramOutlined/>相册
+                    <div  onClick={() => PathLink("/album")} key="album"
+                         className="menu-item-drawer"><span id="album"><InstagramOutlined/>相册</span>
                     </div>
 
                 </div>
