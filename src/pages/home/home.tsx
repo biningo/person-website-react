@@ -6,7 +6,7 @@ import {useHistory, useLocation} from "react-router-dom"
 import GetParams from "../../common/GetParams";
 import MenuNav from "./component/MenuNav";
 import {BlogProps} from "../../common/interfaces/BlogProps";
-import BlogList from "../blog/components/BlogList";
+import BlogList from "./component/BlogList";
 
 
 const Home: FC = () => {
@@ -31,7 +31,30 @@ const Home: FC = () => {
     let [Times,setTimes]= useState([] as string[]);
     //二、请求全部的category  times数据数据 只更在加载的时候更新dom一次 先模拟数据
     useEffect(() => {
-        setCategories(["java", "docker和k8s", "网络编程", "Python爬虫", "操作系统", "网络原理"]);
+        setCategories(["java","java","java","java","java","java", "docker和k8s",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理",
+            "网络编程", "Python爬虫", "操作系统", "网络原理"]);
         setTimes(['2020-06-28', '2020-10-01', '2020-10-21']);
     }, [false]);
 
@@ -42,8 +65,10 @@ const Home: FC = () => {
     let [articleList, setArticleList] = useState(new Array<BlogProps>());
     useEffect(() => {
         let arr: BlogProps[] = [];
-        for (let i = 0; i < 24; i++) {
-            arr.push({bid: i, title: '结中总结中总总结中结中使用总结'+i, category: 'docker', time: '2020-03-20'})
+        for (let i = 0; i < 12; i++) {
+            arr.push({bid: i, title: '结中总总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中总结中', category: 'docker', time: '2020-03-20'});
+            arr.push({bid: i, title: '用结中总总结中结中使用总结结中结中使用总结', category: 'docker', time: '2020-03-20'});
+            arr.push({bid: i, title: '总结中总结中总总结中结中使用总结结中结中', category: 'docker', time: '2020-03-20'});
         }
         setArticleList(arr);
 
@@ -67,7 +92,7 @@ const Home: FC = () => {
         <div>
             <MenuNav {...articleProps}/>
 
-            <BlogList articles={articleList} setArticleList={setArticleList} />
+            <BlogList categories={articleProps.Categories} articles={articleList} setArticleList={setArticleList} />
             <BackTop/>
         </div>
     )
