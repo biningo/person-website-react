@@ -45,6 +45,7 @@ const GobalMenuItems: FC = () => {
                   className="menu-item other-link"><QuestionCircleOutlined />关于本站</span>
             <span id="archive" onClick={() => PathLink("/archive")} key="archive"
                   className="menu-item other-link"><AreaChartOutlined />Archive</span>
+
         </>
     )
 
