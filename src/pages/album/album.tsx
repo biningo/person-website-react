@@ -29,13 +29,13 @@ const Album: FC = () => {
     let setArr = [];
     for (let i = 0; i < 3; i++) {
         setArr.push({
-            src: "http://gin-note.binnb.top/b.jpg",
+            src: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598357102109&di=5b995dede64e4fd5c17e5dd093145bb4&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F7LsWdDW5_xN3otqbppnN2DJv%2Fzhidao%2Fpic%2Fitem%2F4034970a304e251fc6a58873ac86c9177e3e53ee.jpg",
             alt: "First image description"
         })
     }
 
     let images = <Zmage
-        src="http://gin-note.binnb.top/20170811134557_vL83V.jpeg"
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598357102109&di=5b995dede64e4fd5c17e5dd093145bb4&imgtype=0&src=http%3A%2F%2Fgss0.baidu.com%2F7LsWdDW5_xN3otqbppnN2DJv%2Fzhidao%2Fpic%2Fitem%2F4034970a304e251fc6a58873ac86c9177e3e53ee.jpg"
         alt="展示序列图片"
         set={setArr}
     />;
@@ -50,7 +50,21 @@ const Album: FC = () => {
                     images
                 }
             >
-                哒哒哒的撒的撒的啊大大啊大的的啊大 大大啊大的的啊大
+                哒哒哒的撒的撒的啊大大啊大的的啊大 大大啊大的的啊大哒哒哒的撒的撒的啊大大啊大的的啊大 大大啊大的的啊大哒哒哒的撒的撒的啊大大啊大的的啊大 大大啊大的的啊大
+            </Card>
+        </Col>;
+    let list2 =
+
+        <Col className="card" lg={6}>
+
+            <Card
+                className="image-size"
+                hoverable
+                cover={
+                    images
+                }
+            >
+                大 大大啊大的的啊大哒哒哒的撒的撒的啊大大啊大的的啊大 大大啊大的的啊大
             </Card>
         </Col>;
 
@@ -58,6 +72,8 @@ const Album: FC = () => {
     let arr = [];
     for (let i = 0; i < 5; i++) {
         arr.push(list);
+        arr.push(list2);
+
     }
 
 
