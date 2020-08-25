@@ -36,6 +36,7 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any }) => {
                 }
                 <div>
                     <Row>
+
                         <Col lg={8} xs={24}>
                             {
                                 part1.map(article => {
@@ -45,7 +46,8 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any }) => {
                                 })
                             }
                         </Col>
-                        <Col lg={8} xs={24}>
+                        <Col lg={1} />
+                        <Col lg={7} xs={24}>
                             {
                                 part2.map(article => {
                                     return (
@@ -54,7 +56,8 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any }) => {
                                 })
                             }
                         </Col>
-                        <Col lg={8} xs={24}>
+                        <Col lg={1} />
+                        <Col lg={7} xs={24}>
                             {
                                 part3.map(article => {
                                     return (
