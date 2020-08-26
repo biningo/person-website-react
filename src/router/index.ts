@@ -37,10 +37,6 @@ const routers: IRoute[] = [
     {
         path:'/archive',
         component:Archive
-    },
-    {
-        path:'/admin',
-        component:Admin
     }
 ];
 
