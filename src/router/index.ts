@@ -6,7 +6,6 @@ const Album = React.lazy(()=>import("../pages/album/album"));
 const About = React.lazy(()=>import("../pages/about/about"));
 const Blog = React.lazy(()=>import("../pages/blog/blog"));
 const Archive = React.lazy(()=>import("../pages/archive/archive"));
-const Admin = React.lazy(()=>import("../pages/admin/admin"));
 
 export interface IRoute {
     path: string,
