@@ -73,7 +73,7 @@ const Home: FC = () => {
         setArticleList(arr);
 
 
-        let path = '/home?category=' + Category + '&time=' + Time;
+        let path = '/home?category=' + Category+"&page=1";
         history.push(path);
     }, [Category, Time]);
 

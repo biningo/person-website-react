@@ -1,7 +1,9 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {BlogProps} from "../../../common/interfaces/BlogProps";
 import ArticleItem from "./ArticleItem";
 import {Button, Col, Divider, Modal, Pagination, Row, Space, Tag} from "antd";
+import {useHistory} from "react-router";
+import GetParams from "../../../common/GetParams";
 
 
 const BlogList = (props: { articles: BlogProps[],setArticleList:any,categories:string[] }) => {
@@ -29,8 +31,31 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any,categories:s
         }
         i++;
     }
-
+    let history = useHistory();
     let [visible,setVisible] = useState(false);
+
+    let [page,setPage] = useState(1);
+
+    let [params,setParams] = useState(GetParams(history.location));
+    useEffect(()=>{
+        setParams(GetParams(history.location));
+    },[history.location.search]);
+
+    let [category,setCategory] = useState(params.get("category"));
+    useEffect(()=>{
+        let path = '/home?category=' + category+"&page="+page;
+        history.push(path);
+    },[category,page]);
+
+    useEffect(()=>{
+        setCategory(params.get("category"));
+        console.log("params")
+    },[params.get("category")]);
+
+    const changeCategory = (category:string)=>{
+        setVisible(false);
+        setCategory(category);
+    };
 
     return (
         <>
@@ -42,15 +67,15 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any,categories:s
                     onCancel={()=>{setVisible(false)}}
                 >
                     {
-                        categories.map(category=>{
+                        categories.map((category)=>{
                             return (
-                                <Button onClick={()=>{setVisible(false)}} className="category" color="green">{category}</Button>
+                                <Button onClick={()=>{changeCategory(category)}} id={category}  className="category" color="green">{category}</Button>
                             )
                         })
                     }
                 </Modal>
                 {
-                   <h1 ><span onClick={()=>{setVisible(true)}} className="page-head"  >全部(共计16)</span></h1>
+                   <h1 ><span onClick={()=>{setVisible(true)}} className="page-head"  >{category}(共计16)</span></h1>
                 }
 
                 <div >
@@ -91,7 +116,7 @@ const BlogList = (props: { articles: BlogProps[],setArticleList:any,categories:s
 
                 </div>
                 <div style={{marginTop:"2%"}}>
-                <Pagination defaultCurrent={1} total={50} defaultPageSize={17} />
+                <Pagination onChange={(page)=>{setPage(page)}} defaultCurrent={1} total={50} defaultPageSize={17} />
                 </div>
             </div>
         </>
