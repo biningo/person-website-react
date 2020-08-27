@@ -7,7 +7,7 @@ import {Anchor, BackTop, Button, Card, Col, PageHeader, Row, Tag} from "antd";
 //图片插件
 // https://github.com/Caldis/react-zmage
 import Zmage from 'react-zmage'
-import {PushpinOutlined} from "@ant-design/icons/lib";
+import {CameraOutlined, PushpinOutlined} from "@ant-design/icons/lib";
 //视频插件
 // @ts-ignore
 import { Player, BigPlayButton } from 'video-react';
@@ -86,8 +86,8 @@ const Album: FC = () => {
 
         cards.push(<div className="row" id={"2020-" + i}>
             <PageHeader
-                title={<><PushpinOutlined/>2020</>}
-                subTitle={i}
+                title={<><PushpinOutlined/>2020&nbsp;&nbsp;&nbsp;{i}月</>}
+
             />
             <Row>
             {arr}

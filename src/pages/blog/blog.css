@@ -64,8 +64,9 @@ code span{
 }
 
 .article-head-title{
-    font-size: 200%;
+    font-size: 300%;
     font-weight: bolder;
+    color: black;
 }
 
 table{

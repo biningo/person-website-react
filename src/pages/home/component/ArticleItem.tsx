@@ -13,7 +13,7 @@ const ArticleItem = (props: BlogProps) => {
 
 
     const LinkToCategory = () => {
-        history.push("/home?category=" + category + "&time=all")
+        history.push("/home?category=" + category + "&page=1")
     };
 
     return (
